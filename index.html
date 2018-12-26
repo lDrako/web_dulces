@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <Style>
+   /*estilo del background*/     
+        body{
+    text-align: center;
+    margin:0;
+    padding:0;
+    background-image:url(images/background-01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    align-items: center;
+   }
+/*EStilos en general*/
+.caballito{
+    width: 350px;
+    height: 350px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+.secundario{
+    font-size: 1.5em;
+}
+.contenedor{
+    border:solid 3px red;
+   
+
+}
+.contacto{
+    border:solid 3px red;
+    
+}
+.telefono{
+    position: relative;
+    padding-top: 1em;
+
+    }
+/*Estilos de los iconos*/  
+.icon:hover{
+    transform: scale(1.2)
+}
+.icon2:hover{
+    transform: scale(1.2)    
+}
+.spoiler{
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Ocultar botón radio */
+input[id^="spoiler"]{
+display: none;
+}
+/* Estilo botón clicable */
+input[id^="spoiler"] + label {
+display: block;
+width:56px;
+height: 56px;
+margin: 0 auto;
+padding: 5px 20px;
+
+cursor: pointer;
+}
+/* Estilo botón cuando su INPUT está seleccionado */
+input[id^="spoiler"]:checked + label {
+color: #333;
+
+}
+/* Estilo caja SPOILER (inicialmente oculto) */
+input[id^="spoiler"] ~ .spoiler {
+width: 90%;
+height: 0;
+overflow: hidden;
+opacity: 0;
+margin: 10px auto 0; 
+}
+/* Estilo caja SPOILER cuando su INPUT está seleccionado */
+input[id^="spoiler"]:checked + label + .spoiler{
+height: auto;
+opacity: 1;
+}
+/*Estilos tablet*/
+@media screen and (max-width: 768px){
+.caballito{
+    width: 300px;
+    height: 300px;
+}
+}
+@media screen and (max-width: 425px){
+    .caballito{
+    width: 250px;
+    height: 250px;
+}
+.secundario{
+    font-size: 1.2em;
+}
+.separador{
+    font-size:.8em;
+    
+}
+}
+@media screen and (max-width: 375px){
+    .caballito{
+    width: 200px;
+    height: 200px;
+}
+.separador{
+    font-size: .6em;
+}
+.secundario{
+    font-size: .8em;
+}
+}
+
+    
+    </Style>
+</head>
+<body>
+   
+<div class="contenedor">
+
+
+        
+        <div class="separador">
+            <p>ESTAMOS CREANDO <br/>UN DULCE SORPRESA</p>
+        </div>
+        
+        <img src="images/CONSTRUCCIÓN-03.png" alt="" class="caballito">
+    
+      <div class="contacto">
+            <p class="secundario" >MIENTRAS TANTO, CONTACTANOS EN:</p>
+            <img  class="icon" class="icono" src="images/facebookicon.png" alt="" width="56px" height="56px">
+      </div>
+     
+      <div class="telefono">
+        <input type="checkbox" id="spoiler1"></input>
+        <label for="spoiler1"><img class="icon2" src="images/whatsappicon.png" width="56px" height="56px" alt=""></label>
+        <div class="spoiler">9187412465465465</div>
+      </div>
+      
+
+
+ </div>
+    
+</body>
+</html>
